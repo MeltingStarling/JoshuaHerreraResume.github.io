@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Online resume for Joshua Herrera – IT student and aspiring SOC analyst in Orlando, FL." />
+  <title>Joshua Herrera – Online Resume</title>
+  <style>
+    :root { --fg:#0f172a; --muted:#334155; --accent:#2563eb; --bg:#ffffff; --chip:#f1f5f9; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--fg); background:var(--bg); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 880px; margin: 0 auto; padding: 24px 20px 48px; }
+    header { display:flex; flex-direction:column; gap:10px; border-bottom: 2px solid #e5e7eb; padding-bottom: 16px; margin-bottom: 22px; }
+    h1 { font-size: 1.8rem; margin:0; line-height:1.2; }
+    .subtitle { color: var(--muted); }
+    .contact { display:flex; flex-wrap:wrap; gap:10px 16px; align-items:center; }
+    .chip { background:var(--chip); padding:6px 10px; border-radius:999px; font-size:.95rem; }
+    main { display:flex; flex-direction:column; gap:22px; }
+    section h2 { font-size:1.15rem; letter-spacing:.02em; margin:0 0 10px; text-transform: uppercase; color:var(--muted); }
+    ul { margin: 6px 0 0 1.1rem; }
+    li { margin: 6px 0; }
+    .two-col { display:grid; grid-template-columns: 1fr auto; gap:6px 12px; }
+    .role { font-weight:600; }
+    .meta { color:var(--muted); }
+    .row { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+    .skills { display:flex; flex-wrap:wrap; gap:8px; }
+    .skills .chip { font-size:.92rem; }
+    footer { margin-top: 28px; color: var(--muted); font-size: .9rem; }
+    @media print {
+      a { color: inherit; text-decoration: none; }
+      .chip { background:transparent; border:1px solid #cbd5e1; }
+      header { border-bottom: 1px solid #cbd5e1; }
+      .container { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Joshua Herrera</h1>
+      <div class="subtitle">Orlando, FL · IT student & aspiring SOC Analyst</div>
+      <nav class="contact" aria-label="Contact">
+        <a class="chip" href="tel:+12019223812" aria-label="Call Joshua">(201) 922‑3812</a>
+        <a class="chip" href="mailto:Joshuah2021@gmail.com" aria-label="Email Joshua">Joshuah2021@gmail.com</a>
+        <a class="chip" href="https://www.linkedin.com/in/joshua-herrera-173658285/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="chip" href="#projects">Projects</a>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="skills">
+        <h2 id="skills">Technical Skills</h2>
+        <div class="skills">
+          <span class="chip" title="PC Assembly & troubleshooting">PC Assembly</span>
+          <span class="chip">Hardware Troubleshooting</span>
+          <span class="chip">Microsoft Office</span>
+          <span class="chip">Python Scripting</span>
+          <span class="chip">C</span>
+          <span class="chip">Python</span>
+          <span class="chip">Java</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">AWS</span>
+          <span class="chip">Wireshark</span>
+          <span class="chip">Suricata</span>
+          <span class="chip">VirtualBox</span>
+          <span class="chip">Ubuntu</span>
+        </div>
+      </section>
+
+      <section aria-labelledby="education">
+        <h2 id="education">Education</h2>
+        <div class="two-col">
+          <div>
+            <div class="role">B.S. in Information Technology</div>
+            <div class="meta">University of Central Florida — GPA 3.4</div>
+          </div>
+          <div class="meta"><time datetime="2025-12">Dec 2025</time></div>
+        </div>
+        <ul>
+          <li>Relevant coursework: Security in Computing; Data Structures & Algorithms; Object‑Oriented Programming (Java); Systems Administration & Maintenance; Computer Network Concepts; Malware Analysis; Topics in Cybersecurity.</li>
+        </ul>
+        <div class="two-col" style="margin-top:14px;">
+          <div>
+            <div class="role">Associate of General Studies</div>
+            <div class="meta">St. Johns River State College — Middleburg, FL — GPA 3.3</div>
+          </div>
+          <div class="meta"><time datetime="2023-05">May 2023</time></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="experience">
+        <h2 id="experience">Experience</h2>
+        <div class="row">
+          <div>
+            <div class="role">IT Support Intern</div>
+            <div class="meta">University of Central Florida · Orlando, FL</div>
+          </div>
+          <div class="meta"><time datetime="2024-06">Jun 2024</time> – <time datetime="2024-08">Aug 2024</time></div>
+        </div>
+        <ul>
+          <li>Troubleshot hardware/software issues for students and faculty; supported classroom A/V and endpoints.</li>
+          <li>Documented and tracked requests in a ticketing system; ensured timely resolution and follow‑up.</li>
+          <li>Assisted with device imaging and peripheral setup during lab refresh cycles.</li>
+        </ul>
+
+        <div class="row" style="margin-top:12px;">
+          <div>
+            <div class="role">Stocker Associate</div>
+            <div class="meta">Walmart Inc · Middleburg, FL</div>
+          </div>
+          <div class="meta"><time datetime="2021-08">Aug 2021</time> – <time datetime="2023-07">Jul 2023</time></div>
+        </div>
+        <ul>
+          <li>Trained new associates and improved department efficiency and customer satisfaction.</li>
+          <li>Maintained stock rotation and accuracy across ~3,500 items per shift.</li>
+          <li>Collaborated cross‑functionally to meet deadlines during variable shipment schedules.</li>
+        </ul>
+
+        <div class="row" style="margin-top:12px;">
+          <div>
+            <div class="role">Lead Ice Cream Server</div>
+            <div class="meta">Maggie D's Ice Cream Shoppe · Middleburg, FL</div>
+          </div>
+          <div class="meta"><time datetime="2020-01">Jan 2020</time> – <time datetime="2021-08">Aug 2021</time></div>
+        </div>
+        <ul>
+          <li>Managed opening/closing, inventory, and cash handling; resolved customer issues.</li>
+          <li>Trained new hires and adapted to multiple roles to maintain service quality.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="projects" id="projects">
+        <h2 id="projects">Projects</h2>
+        <div class="role">Wheel of Dice</div>
+        <ul>
+          <li>Built a decision‑helper “spinner” app using Python (<code>random</code>, <code>time</code>, optional UI libs) and published online.</li>
+          <li>Learned basics of server login and static site hosting to deploy the project.</li>
+          <li>Iterated on user‑friendly visuals and simple interaction loop.</li>
+        </ul>
+        <div class="role" style="margin-top:10px;">Careers Connect (School Project)</div>
+        <ul>
+          <li>Led a team of 5 to design a job‑search‑oriented site inspired by LinkedIn.</li>
+          <li>Implemented digestible HTML layouts and improved UI visibility; explored job post rotation logic (&gt; 90 days).</li>
+          <li>Prototyped collaboratively on Wix; practiced team coordination and deliverable timelines.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="awards">
+        <h2 id="awards">Certifications & Memberships</h2>
+        <ul>
+          <li>CompTIA Security+ (earned)</li>
+          <li>CompTIA Network+ (expected Dec 2025)</li>
+          <li>CompTIA IT Fundamentals (ITF+)</li>
+          <li>AWS Academy: Cloud Security Foundations & Cloud Foundations (badges earned)</li>
+          <li>HackUCF Member</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="y"></span> Joshua Herrera. This is a single‑file page you can host anywhere (GitHub Pages, Netlify, Vercel, etc.).</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
