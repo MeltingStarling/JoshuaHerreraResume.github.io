@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Careers Connect Project – Joshua Herrera" />
+  <title>Careers Connect – Joshua Herrera</title>
+  <style>
+    :root { --fg:#0f172a; --muted:#334155; --accent:#2563eb; --bg:#ffffff; --chip:#f1f5f9; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:var(--bg); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 880px; margin: 0 auto; padding: 24px 20px 48px; }
+    header { display:flex; flex-direction:column; gap:10px; border-bottom: 2px solid #e5e7eb; padding-bottom: 16px; margin-bottom: 22px; }
+    h1 { font-size: 1.8rem; margin:0; line-height:1.2; }
+    .subtitle { color: var(--muted); }
+    main { display:flex; flex-direction:column; gap:22px; }
+    section h2 { font-size:1.15rem; letter-spacing:.02em; margin:0 0 10px; text-transform: uppercase; color:var(--muted); }
+    ul { margin: 6px 0 0 1.1rem; }
+    li { margin: 6px 0; }
+    .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .chip { background:var(--chip); padding:6px 10px; border-radius:999px; font-size:.95rem; }
+    img { max-width:100%; border:1px solid #e2e8f0; border-radius:12px; margin:12px 0; }
+    footer { margin-top: 28px; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Careers Connect</h1>
+      <div class="subtitle">School Project · Website inspired by LinkedIn</div>
+      <nav class="contact" aria-label="Navigation">
+        <a class="chip" href="index.html">Home</a>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="overview">
+        <h2 id="overview">Project Overview</h2>
+        <p>
+          Careers Connect was a group project created with Wix to simulate a job-search platform similar to LinkedIn. Our goal was to design a site that simplified job searching, emphasized clarity in the user interface, and rotated jobs older than 90 days for relevancy.
+        </p>
+        <p>
+          <a class="chip" href="https://editor.wix.com/html/editor/web/renderer/edit/a9e425d3-fc71-4aa0-b729-546a1ea39963?metaSiteId=8465fd2e-8603-4b55-a131-b81ac583db49" target="_blank" rel="noopener">
+            View Careers Connect (Wix Link)
+          </a>
+        </p>
+        <img src="careersconnect-example.png" alt="Screenshot or illustration of Careers Connect project" />
+        <ul>
+          <li>Designed a website similar to LinkedIn's format, optimized for easy job searching.</li>
+          <li>Led a team of 5 students to develop the project by coordinating tasks and deadlines.</li>
+          <li>Learned HTML for structuring digestible layouts and improving UI visibility.</li>
+          <li>Implemented logic to rotate jobs posted more than 3 months prior.</li>
+          <li>Practiced collaborative development using Wix with clear deliverables.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="skills">
+        <h2 id="skills">Skills Gained</h2>
+        <div class="skills">
+          <span class="chip">Team Leadership</span>
+          <span class="chip">HTML & Web Layout</span>
+          <span class="chip">UI/UX Design</span>
+          <span class="chip">Wix Platform</span>
+          <span class="chip">Project Coordination</span>
+          <span class="chip">Job Data Management</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="y"></span> Joshua Herrera. Part of portfolio site.</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
