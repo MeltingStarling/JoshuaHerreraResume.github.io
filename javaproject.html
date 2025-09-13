@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Java coursework projects by Joshua Herrera (UCF)" />
+  <title>Java Projects – Joshua Herrera</title>
+  <style>
+    :root { --fg:#0f172a; --muted:#334155; --accent:#2563eb; --bg:#ffffff; --chip:#f1f5f9; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:var(--fg); background:var(--bg); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 880px; margin: 0 auto; padding: 24px 20px 48px; }
+    header { display:flex; flex-direction:column; gap:10px; border-bottom: 2px solid #e5e7eb; padding-bottom: 16px; margin-bottom: 22px; }
+    h1 { font-size: 1.8rem; margin:0; line-height:1.2; }
+    .subtitle { color: var(--muted); }
+    nav { display:flex; flex-wrap:wrap; gap:10px 12px; align-items:center; }
+    .chip { background:var(--chip); padding:6px 10px; border-radius:999px; font-size:.95rem; }
+    main { display:flex; flex-direction:column; gap:28px; }
+    section h2 { font-size:1.15rem; letter-spacing:.02em; margin:0 0 10px; text-transform: uppercase; color:var(--muted); }
+    h3 { margin: 8px 0 6px; }
+    ul { margin: 6px 0 0 1.1rem; }
+    li { margin: 6px 0; }
+    .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .two-col { display:grid; grid-template-columns: 1fr auto; gap:6px 12px; align-items:baseline; }
+    .meta { color: var(--muted); }
+    .card { border:1px solid #e5e7eb; border-radius:14px; padding:14px; }
+    img { max-width:100%; border:1px solid #e2e8f0; border-radius:12px; margin:10px 0; }
+    footer { margin-top: 28px; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Java Projects</h1>
+      <div class="subtitle">Selected coursework projects demonstrating OOP, GUI, and file I/O</div>
+      <nav aria-label="Navigation">
+        <a class="chip" href="index.html">Home</a>
+        <a class="chip" href="careersconnect.html">Careers Connect</a>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="invoice">
+        <h2 id="invoice">Valence College Fee Invoice (Java)</h2>
+        <div class="card">
+          <div class="two-col">
+            <h3>Overview</h3>
+            <span class="meta">Coursework • OOP • CLI/Console</span>
+          </div>
+          <p>
+            A Java application that generates fee invoices for different student types (PhD, MS, Undergraduate), using object‑oriented design with class hierarchies and polymorphism. Supports input validation, tuition calculation rules, and formatted invoice output.
+          </p>
+          <img src="java-invoice-example.png" alt="Invoice app console output mockup" />
+          <h3>Key Features</h3>
+          <ul>
+            <li>Class hierarchy: <code>Student</code> base class with <code>PhDStudent</code>, <code>MsStudent</code>, and <code>UndergraduateStudent</code> subclasses.</li>
+            <li>Encapsulated tuition/fee rules per student type with overridable methods.</li>
+            <li>Robust input parsing and formatted invoice summaries.</li>
+          </ul>
+          <h3>Skills Gained</h3>
+          <div class="skills">
+            <span class="chip">Java OOP (Inheritance/Polymorphism)</span>
+            <span class="chip">Data Validation</span>
+            <span class="chip">Formatting & I/O</span>
+            <span class="chip">Unit Testing Mindset</span>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="inventory">
+        <h2 id="inventory">InventoryManager / NileDotCom (Java Swing)</h2>
+        <div class="card">
+          <div class="two-col">
+            <h3>Overview</h3>
+            <span class="meta">Coursework • GUI • CSV</span>
+          </div>
+          <p>
+            A desktop order‑entry and inventory tracking tool built with Java Swing. Reads products from a CSV file, lets users add items to a cart, calculates totals/taxes/discounts, and exports transactions for record‑keeping.
+          </p>
+          <img src="java-inventory-gui.png" alt="Inventory manager Java Swing UI mockup" />
+          <h3>Key Features</h3>
+          <ul>
+            <li>CSV import/export for inventory and transactions (<code>BufferedReader</code>, <code>FileWriter</code>).</li>
+            <li>Form validation, clear/reset of fields, and running order totals.</li>
+            <li>Separation of concerns with <code>Item</code>, <code>Order</code>, and manager/controller classes.</li>
+          </ul>
+          <h3>Skills Gained</h3>
+          <div class="skills">
+            <span class="chip">Java Swing</span>
+            <span class="chip">File I/O (CSV)</span>
+            <span class="chip">Event‑Driven Programming</span>
+            <span class="chip">MVC Thinking</span>
+            <span class="chip">Exception Handling</span>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="code">
+        <h2 id="code">Code & Artifacts</h2>
+        <p>
+          Add links here to your GitHub repositories when ready, e.g.:
+        </p>
+        <ul>
+          <li><a href="#" onclick="return false">Valence Invoice – GitHub (coming soon)</a></li>
+          <li><a href="#" onclick="return false">InventoryManager/NileDotCom – GitHub (coming soon)</a></li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="y"></span> Joshua Herrera. Part of portfolio site.</p>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
