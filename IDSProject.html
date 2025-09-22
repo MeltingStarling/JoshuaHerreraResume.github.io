@@ -3,53 +3,182 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI-Based Intrusion Detection System (IDS) Project</title>
+  <title>AI-Based Intrusion Detection System (IDS) – Joshua Herrera</title>
+  <meta name="description" content="Portfolio page for an AI-based IDS using UNSW-NB15, Random Forest with RandomizedSearchCV, and planned Suricata/Snort integration in a homelab Ubuntu VM." />
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      margin: 2rem;
-      line-height: 1.6;
-      color: #0f172a;
+    :root { --fg:#0f172a; --muted:#475569; --accent:#2563eb; --chip:#eef2ff; --bg:#ffffff; }
+    * { box-sizing:border-box; }
+    html,body { margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; color:var(--fg); background:var(--bg); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 920px; margin: auto; padding: 24px; }
+    header { display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px; gap: 12px; flex-wrap: wrap; }
+    .breadcrumbs a { color:var(--muted); }
+    h1 { margin: 0.4rem 0 0.8rem; color:var(--accent); }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; background:var(--chip); margin-right:8px; font-size: 0.9rem; }
+    section { margin: 28px 0; }
+    h2 { margin: 0 0 10px; }
+    .grid { display:grid; grid-template-columns: 1fr; gap:16px; }
+    .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+    .card { border:1px solid #e5e7eb; border-radius:16px; padding:16px; box-shadow: 0 1px 2px rgba(0,0,0,.03); }
+    code, pre { background:#0f172a0c; border:1px solid #e5e7eb; border-radius:8px; }
+    code { padding:2px 6px; }
+    pre { padding:12px; overflow:auto; }
+    .img-frame { border:1px solid #e5e7eb; border-radius:16px; padding:10px; background:#fafafa; }
+    .btns { display:flex; gap:10px; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; padding:10px 14px; border-radius:12px; border:1px solid #e5e7eb;
+      background:#fff; text-decoration:none; font-weight:600;
     }
-    h1 { color: #2563eb; }
-    a { color: #2563eb; }
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
+    .btn.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+    ul.compact li { margin: 4px 0; }
+    table { border-collapse: collapse; width:100%; }
+    th, td { border:1px solid #e5e7eb; padding:8px; text-align:left; }
+    .muted { color: var(--muted); }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>AI-Based Intrusion Detection System (IDS) Project</h1>
-    <p>
-      This page provides an overview of my AI-based Intrusion Detection System (IDS) project.
-      The project leverages machine learning techniques to analyze network traffic
-      and detect anomalous behavior that may indicate potential cyber threats.
-    </p>
+    <header>
+      <div class="breadcrumbs">
+        <a href="index.html">← Back to Resume</a>
+      </div>
+      <div class="btns">
+        <a class="btn" href="IDSProject.html">Project Page</a>
+        <a class="btn primary" target="_blank" href="https://github.com/MeltingStarling/AI-IDS-Project">View on GitHub</a>
+      </div>
+    </header>
 
-    <h2>Key Features</h2>
-    <ul>
-      <li>Built using Python and Scikit-learn</li>
-      <li>Uses the UNSW-NB15 dataset for training/testing</li>
-      <li>Random Forest + RandomizedSearchCV for anomaly detection</li>
-      <li>Planned integration with Suricata or Snort for real-time alerts</li>
-      <li>Deployed in a homelab environment via Ubuntu VM</li>
-    </ul>
+    <h1>AI-Based Intrusion Detection System (IDS)</h1>
+    <p class="muted">Network anomaly detection using classical ML on <em>UNSW-NB15</em>, tuned Random Forest, and a homelab deployment path with Suricata/Snort.</p>
 
-    <h2>Benefits</h2>
-    <p>
-      This project demonstrates practical cybersecurity and data science skills,
-      including dataset preprocessing, model training, and deployment in a SOC-like environment.
-    </p>
+    <section>
+      <span class="pill">Python</span>
+      <span class="pill">scikit-learn</span>
+      <span class="pill">RandomizedSearchCV</span>
+      <span class="pill">UNSW-NB15</span>
+      <span class="pill">Ubuntu VM</span>
+      <span class="pill">Suricata/Snort (planned)</span>
+    </section>
 
-    <h2>View the Code</h2>
-    <p>
-      You can find the full source code and documentation on my GitHub repository:  
-      <a href="https://github.com/MeltingStarling/AI-IDS-Project" target="_blank">
-        AI-IDS-Project Repository
-      </a>
-    </p>
+    <section class="cards">
+      <div class="card">
+        <h2>Overview</h2>
+        <p>
+          I built an IDS that flags anomalous network activity using a supervised ML pipeline.
+          It ingests tabular flow features, performs preprocessing, and predicts normal vs. malicious traffic.
+          The goal is a practical, SOC-relevant project demonstrating data wrangling, modeling, and deployment.
+        </p>
+      </div>
+      <div class="card">
+        <h2>Why It Matters</h2>
+        <ul class="compact">
+          <li>Hands-on ML for security: feature engineering, training, evaluation.</li>
+          <li>Operational focus: designed to plug into Suricata/Snort for real alerts.</li>
+          <li>Homelab ready: runs on an Ubuntu VM; lightweight and reproducible.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Data & Features</h2>
+        <ul class="compact">
+          <li><strong>Dataset:</strong> UNSW-NB15 (mix of normal & multiple attack types).</li>
+          <li><strong>Preprocessing:</strong> missing-value handling, label encoding, train/test split, scaling as needed.</li>
+          <li><strong>Targets:</strong> Binary (malicious vs normal). Multi-class can be added later.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Model & Training</h2>
+        <ul class="compact">
+          <li><strong>Algorithm:</strong> Random Forest (fast, robust, interpretable feature importance).</li>
+          <li><strong>Tuning:</strong> <code>RandomizedSearchCV</code> over depth, estimators, splits, bootstrap.</li>
+          <li><strong>Validation:</strong> Stratified K-fold cross-validation.</li>
+          <li><strong>Artifacts:</strong> Persisted model with <code>joblib</code>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Results (Current)</h2>
+      <p class="muted">Plug in your latest numbers when you have them from your training run.</p>
+      <table>
+        <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Accuracy</td><td><em>e.g., 0.96</em></td></tr>
+          <tr><td>Precision</td><td><em>e.g., 0.95</em></td></tr>
+          <tr><td>Recall</td><td><em>e.g., 0.94</em></td></tr>
+          <tr><td>F1-Score</td><td><em>e.g., 0.945</em></td></tr>
+          <tr><td>ROC-AUC</td><td><em>e.g., 0.98</em></td></tr>
+        </tbody>
+      </table>
+
+      <div class="img-frame" style="margin-top:12px;">
+        <!-- Optional: add your confusion matrix or ROC image here -->
+        <img src="images/ids-confusion-matrix.png" alt="Confusion Matrix (placeholder)" style="max-width:100%; height:auto;">
+        <p class="muted" style="margin:6px 0 0;">Place a plot in <code>images/ids-confusion-matrix.png</code> and it will show here.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Architecture (Planned Runtime)</h2>
+        <pre><code>PC/VM (Ubuntu)
+   ├─ Suricata/Snort → Netflow/alerts
+   ├─ Feature Extractor (Python)
+   ├─ Preprocessor (encoders/scalers)
+   ├─ RandomForest (joblib model)
+   └─ Output: alert JSON / log file → (SIEM or email/webhook)</code></pre>
+      </div>
+      <div class="card">
+        <h2>Deployment & Use</h2>
+        <ol class="compact">
+          <li>Clone repo & create venv; install requirements.</li>
+          <li>Run training script or load prebuilt <code>.joblib</code> model.</li>
+          <li>Feed captured flow features (CSV or live pipe) to the predictor.</li>
+          <li>Emit alerts to file/stdout; integrate with Suricata/Snort or a SIEM.</li>
+        </ol>
+        <pre><code># sample run (training)
+python train.py --data data/UNSW-NB15.csv --out model.joblib
+
+# sample run (inference)
+python predict.py --model model.joblib --in flows.csv --out alerts.json</code></pre>
+      </div>
+    </section>
+
+    <section class="cards">
+      <div class="card">
+        <h2>What I Learned</h2>
+        <ul class="compact">
+          <li>Data cleaning & encoding for mixed network features.</li>
+          <li>Model selection & hyperparameter tuning under time limits.</li>
+          <li>Designing for operational fit (formatting alerts, lightweight runtime).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Roadmap</h2>
+        <ul class="compact">
+          <li>🟦 Export Suricata-compatible alerts (EVE JSON → webhook).</li>
+          <li>🟦 Add simple web UI (Flask) to view alert stream.</li>
+          <li>🟨 Multi-class labeling (attack families), feature importance chart.</li>
+          <li>🟨 Compare models (XGBoost/LightGBM) and calibrate probabilities.</li>
+          <li>⬜ Real-time PCAP → features pipeline.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Links</h2>
+      <ul>
+        <li><a target="_blank" href="https://github.com/MeltingStarling/AI-IDS-Project">AI-IDS-Project (GitHub)</a></li>
+        <li><a href="index.html">Back to Resume</a></li>
+      </ul>
+    </section>
+
+    <footer class="muted" style="margin-top:20px;">
+      © Joshua Herrera — Built for portfolio demonstration.
+    </footer>
   </div>
 </body>
 </html>
